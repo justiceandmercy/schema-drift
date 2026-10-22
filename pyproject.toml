@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schema-drift"
+version = "0.1.0"
+description = "Detects drift between declared data schemas and runtime artifacts."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+schema-drift = "schema_drift.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
